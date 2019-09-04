@@ -8,7 +8,7 @@ import {
     TextInput,
     Dimensions,
     KeyboardAvoidingView,
-    ToastAndroid
+    ToastAndroid,AsyncStorage
 } from 'react-native';
 import { Fonts } from '../utilts/Fonts';
 import { emailChanged, passwordChanged } from '../actions';
@@ -16,21 +16,32 @@ import { connect } from 'react-redux'
 const WIDTH = Math.round(Dimensions.get('window').width); a = 2;
 
 class Login extends Component {
-
+    constructor(){
+        super();
+        this._checkLogedIn();
+    }
+    _checkLogedIn=async()=>{
+        const isLogedIn= await AsyncStorage.getItem('isLogedIn')
+        console.log("isLogedIn: ", isLogedIn)
+        if(isLogedIn=='1'){
+            this.props.navigation.navigate('DashBoard')
+        }
+        
+    }
     onEmailChanged(text) {
         this.props.emailChanged(text)
     }
     onPasswordChanged(text) {
         this.props.passwordChanged(text)
     }
-    onLoginClick() {
+    onLoginClick=async()=> {
         const { email, password } = this.props;
         if (email == 'Hassam' && password == '123') {
-            ToastAndroid.show('LOGIN SUCESSFULL', ToastAndroid.SHORT)
+            await AsyncStorage.setItem('isLogedIn', '1')
+            this.props.navigation.navigate('Dashboard')
         }
         else {
-            ToastAndroid.show('LOGIN Failed', ToastAndroid.SHORT)
-        }
+            alert('LOGIN FAILED')        }
     }
 
 
@@ -42,7 +53,10 @@ class Login extends Component {
             <View style={{ flex: 1, backgroundColor: '#E0EEF5' }}>
                 <KeyboardAvoidingView behavior='position'>
                     <Image source={require('../../assets/images/welcome.png')}
-                        style={{ marginTop: 20, width: 250, height: 400, alignSelf: 'center' }} />
+                    resizeMode='contain'
+                        style={{ marginTop: 20, width: 250, height: 340, alignSelf: 'center' }} 
+                        
+                        />
 
 
                     <View style={{ flexDirection: 'row' }}>
@@ -52,7 +66,8 @@ class Login extends Component {
                             onChangeText={this.onEmailChanged.bind(this)}
                             underlineColorAndroid='transparent'
                             style={styles.inputStyle}
-                            value={this.props.email} />
+                            value={this.props.email} 
+                            />
                     </View>
                     <View style={{ flexDirection: 'row', marginTop: 15 }}>
                         <TextInput
@@ -132,7 +147,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,0.02)',
         color: 'black',
         borderColor: 'gray',
-        shadowOpacity: 2,
+        //shadowOpacity: 2,
         borderRadius: 3,
         borderWidth: 0.3,
         marginHorizontal: 25

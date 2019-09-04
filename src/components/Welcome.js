@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Image, ImageBackground, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, AsyncStorage ,Image, ImageBackground, ScrollView } from 'react-native';
 import { background } from '../../constants/Image'
 import { Fonts } from '../utilts/Fonts';
 
@@ -21,7 +21,7 @@ const BackgroundImages = [
 
 
 class Welcome extends Component {
-
+   
     renderImage(){
         return(
             <ScrollView style={{flex:0.8, width:250}}
