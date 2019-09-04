@@ -20,11 +20,16 @@ class Login extends Component {
         super();
         this._checkLogedIn();
     }
+    static navigationOptions=({navigation})=>{
+        return{
+            header:null
+        }
+    }
     _checkLogedIn=async()=>{
         const isLogedIn= await AsyncStorage.getItem('isLogedIn')
         console.log("isLogedIn: ", isLogedIn)
         if(isLogedIn=='1'){
-            this.props.navigation.navigate('DashBoard')
+            this.props.navigation.navigate('TabNav')
         }
         
     }
@@ -38,7 +43,7 @@ class Login extends Component {
         const { email, password } = this.props;
         if (email == 'Hassam' && password == '123') {
             await AsyncStorage.setItem('isLogedIn', '1')
-            this.props.navigation.navigate('Dashboard')
+            this.props.navigation.navigate('TabNav')
         }
         else {
             alert('LOGIN FAILED')        }

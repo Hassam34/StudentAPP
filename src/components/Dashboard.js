@@ -8,10 +8,14 @@ import { Fonts } from '../utilts/Fonts';
 
 
 class DashBoard extends Component {
-   
+    static navigationOptions=({navigation})=>{
+        return{
+            header:null
+        }
+    }
 
     render() {
-        //console.log('email: ', this.props.email)
+        
         return (
             <View style={{ flex: 1, backgroundColor: '#E0EEF5' }}>
                 <Text>
