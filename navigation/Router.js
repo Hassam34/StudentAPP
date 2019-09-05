@@ -1,4 +1,5 @@
 import React from 'react';
+import {Dimensions} from 'react-native'
 import Welcome from '../src/components/Welcome';
 import Login from '../src/components/Login';
 import Signout from '../src/components/Signout';
@@ -13,14 +14,15 @@ import Icon2 from 'react-native-vector-icons/Feather'
 // import {AsyncStorage,ActivityIndicator,StatusBar} from 'react-native'
 import { createAppContainer, createSwitchNavigator,createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation'
 
-
+const WIDTH= Math.round(Dimensions.get('window').width);
+const HEIGHT= Math.round(Dimensions.get('window').height);
 const TabNav = createBottomTabNavigator({
     Home: {
         screen: Dashboard,
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon1  name='home' size={50} style={{ color: focused ? "red" : "#363636" }} />
+                    <Icon1  name='home' size={50}style={{ color: focused ? "red" : "#363636" ,width:50, }} />
                 );
             }
         }
@@ -30,7 +32,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon  size={50} name='calendar' style={{ color: focused ? "red" : "#363636" }} />
+                    <Icon  size={50} name='calendar' style={{ color: focused ? "red" : "#363636" ,width:50}} />
                 );
             }
         }
@@ -43,7 +45,7 @@ const TabNav = createBottomTabNavigator({
             tabBarIcon: ({ focused }) => {
                 return (
                     
-                        <Icon1 size={50} name='pluscircleo' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon1 size={50} name='pluscircleo' style={{ color: focused ? "red" : "#363636" ,width:50, }} />
                 
                 );
             }
@@ -54,7 +56,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon1 size={50} name='form' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon1 size={50} name='form' style={{ color: focused ? "red" : "#363636",width:50,  }} />
                 );
             }
         }
@@ -64,7 +66,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon2 size={50} name='mail' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon2 size={50} name='mail' style={{ color: focused ? "red" : "#363636" ,width:50, }} />
                 );
             }
         }
@@ -77,6 +79,7 @@ const TabNav = createBottomTabNavigator({
             inactiveTintColor: "white",
             showIcon: true,
             showLabel:false,
+            width:50,
             // labelStyle: {
             //     fontSize: 10,
             //     textTransform: "uppercase",

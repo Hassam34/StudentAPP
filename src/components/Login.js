@@ -77,7 +77,7 @@ class Login extends Component {
                     </View>
                     <View style={{ alignItems: 'center', marginTop: 15 }}>
                         <TouchableOpacity onPress={this.onLoginClick.bind(this)} >
-                        <View style={{ borderRadius: 20, width: 260, height: 70, justifyContent: 'center', backgroundColor: '#8B63E6', alignItems: 'center' }}>
+                        <View style={{ borderRadius: 45, width: 260, height: 70, justifyContent: 'center', backgroundColor: '#8B63E6', alignItems: 'center' }}>
                             <Text style={{ fontSize: 38, color: 'white', fontFamily:Fonts.BurlingameProSemiBold }}>LOGIN</Text>
                         </View>
                         </TouchableOpacity>
