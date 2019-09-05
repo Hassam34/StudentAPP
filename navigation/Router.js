@@ -11,6 +11,8 @@ import Mail from '../src/components/Mail';
 import Icon from 'react-native-vector-icons/EvilIcons'
 import Icon1 from 'react-native-vector-icons/AntDesign'
 import Icon2 from 'react-native-vector-icons/Feather'
+import Icon3 from 'react-native-vector-icons/FontAwesome'
+
 // import {AsyncStorage,ActivityIndicator,StatusBar} from 'react-native'
 import { createAppContainer, createSwitchNavigator,createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation'
 
@@ -32,7 +34,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon  size={50} name='calendar' style={{ color: focused ? "red" : "#363636" ,width:50}} />
+                    <Icon3 size={50} name='calendar' style={{ color: focused ? "red" : "#363636" ,width:50}} />
                 );
             }
         }
