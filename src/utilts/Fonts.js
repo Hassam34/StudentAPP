@@ -1,5 +1,6 @@
 export const Fonts={
     LexendGiga:'LexendGiga-Regular',
     BurlingameProRegular:'BurlingamePro-Regular',
-    BurlingameProSemiBold:'BurlingamePro-SemiBold'
+    BurlingameProSemiBold:'BurlingamePro-SemiBold',
+    BurlingameProBold:'BurlingamePro-Bold'
 }

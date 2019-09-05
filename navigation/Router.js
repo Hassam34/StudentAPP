@@ -3,11 +3,15 @@ import Welcome from '../src/components/Welcome';
 import Login from '../src/components/Login';
 import Signout from '../src/components/Signout';
 import Dashboard from '../src/components/Dashboard';
+import Calendar from '../src/components/Calendar';
+import Add from '../src/components/Add';
+import Edit from '../src/components/Edit';
+import Mail from '../src/components/Mail';
 import Icon from 'react-native-vector-icons/EvilIcons'
 import Icon1 from 'react-native-vector-icons/AntDesign'
 import Icon2 from 'react-native-vector-icons/Feather'
-import {AsyncStorage} from 'react-native'
-import { createAppContainer, createSwitchNavigator, DrawerContent,createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation'
+// import {AsyncStorage,ActivityIndicator,StatusBar} from 'react-native'
+import { createAppContainer, createSwitchNavigator,createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation'
 
 
 const TabNav = createBottomTabNavigator({
@@ -16,51 +20,51 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon1  name='home' size={30} style={{ color: focused ? "red" : "#363636" }} />
+                    <Icon1  name='home' size={50} style={{ color: focused ? "red" : "#363636" }} />
                 );
             }
         }
     },
-    Calender: {
-        screen: Welcome,
+    Calendar: {
+        screen: Calendar,
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon  size={30} name='calendar' style={{ color: focused ? "red" : "#363636" }} />
+                    <Icon  size={50} name='calendar' style={{ color: focused ? "red" : "#363636" }} />
                 );
             }
         }
     },
 
 
-    ADD: {
-        screen: Welcome,
+    Add: {
+        screen: Add,
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
                     
-                        <Icon1 size={30} name='plus' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon1 size={50} name='pluscircleo' style={{ color: focused ? "red" : "#363636" }} />
                 
                 );
             }
         }
     },
     Edit: {
-        screen: Welcome,
+        screen: Edit,
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon1 size={30} name='form' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon1 size={50} name='form' style={{ color: focused ? "red" : "#363636" }} />
                 );
             }
         }
     },
     Mail: {
-        screen: Welcome,
+        screen: Mail,
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon2 size={30} name='mail' style={{ color: focused ? "red" : "#363636" }} />
+                        <Icon2 size={50} name='mail' style={{ color: focused ? "red" : "#363636" }} />
                 );
             }
         }
@@ -72,17 +76,19 @@ const TabNav = createBottomTabNavigator({
             activeTintColor: "black",
             inactiveTintColor: "white",
             showIcon: true,
-            labelStyle: {
-                fontSize: 10,
-                textTransform: "uppercase",
-                paddingTop: 10,
-                fontWeight:'bold'
-            },
+            showLabel:false,
+            // labelStyle: {
+            //     fontSize: 10,
+            //     textTransform: "uppercase",
+            //     paddingTop: 5,
+            //     fontWeight:'bold'
+            // },
 
             style: {
-                backgroundColor: "gray",
+                backgroundColor: '#6DBAD7  ',
                 paddingVertical: 10,
                 height: 60,
+                
                 marginBottom: 0,
                 shadowOpacity: 0.05,
                 shadowRadius: 10,
@@ -96,7 +102,7 @@ const TabNav = createBottomTabNavigator({
 
 const drawerNavigation = createDrawerNavigator({
     //DashBoard: { screen: Dashboard },
-     TabNav: {screen:TabNav},
+    TabNav: {screen:TabNav},
     SigOut: {screen:Signout},
     //Welcome,
 },
@@ -119,7 +125,7 @@ const stackNavigation= createStackNavigator({
 )
 
 const switchNavigation = createSwitchNavigator({
-    Welcome,
+   Welcome,
     TabNav,
     Login:{screen:stackNavigation}
     

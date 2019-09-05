@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import { Fonts } from '../../utilts/Fonts';
 
 const Header =(props)=>{
@@ -9,10 +9,10 @@ const Header =(props)=>{
          </View>
     );  
 };
-const styles ={
+const styles =StyleSheet.create({
     viewStyle: {
-        backgroundColor:'#F8F8F8',
-        justifyContents:'center',
+        backgroundColor:'#1095E3',
+        justifyContent:'center',
         alignItems:'center',
         height:45,
         paddingTop:10,
@@ -28,7 +28,9 @@ const styles ={
     },
     textStyle: {
         fontFamily:Fonts.BurlingameProRegular,
-        fontSize:20
+        fontSize:20,
+        color:'white',
+        fontWeight:'bold'
     }  
-};
+})
 export {Header};

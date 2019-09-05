@@ -18,20 +18,11 @@ const WIDTH = Math.round(Dimensions.get('window').width); a = 2;
 class Login extends Component {
     constructor(){
         super();
-        this._checkLogedIn();
     }
     static navigationOptions=({navigation})=>{
         return{
             header:null
         }
-    }
-    _checkLogedIn=async()=>{
-        const isLogedIn= await AsyncStorage.getItem('isLogedIn')
-        console.log("isLogedIn: ", isLogedIn)
-        if(isLogedIn=='1'){
-            this.props.navigation.navigate('TabNav')
-        }
-        
     }
     onEmailChanged(text) {
         this.props.emailChanged(text)
@@ -59,7 +50,7 @@ class Login extends Component {
                 <KeyboardAvoidingView behavior='position'>
                     <Image source={require('../../assets/images/welcome.png')}
                     resizeMode='contain'
-                        style={{ marginTop: 20, width: 250, height: 340, alignSelf: 'center' }} 
+                        style={{ marginTop: 20, width: 350, height: 440, alignSelf: 'center' }} 
                         
                         />
 
@@ -86,9 +77,9 @@ class Login extends Component {
                     </View>
                     <View style={{ alignItems: 'center', marginTop: 15 }}>
                         <TouchableOpacity onPress={this.onLoginClick.bind(this)} >
-                            <View style={{ borderRadius: 20, width: 160, height: 40, justifyContent: 'center', backgroundColor: '#8B63E6', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 18, color: 'white', fontFamily: Fonts.BurlingameProSemiBold }}>LOGIN</Text>
-                            </View>
+                        <View style={{ borderRadius: 20, width: 260, height: 70, justifyContent: 'center', backgroundColor: '#8B63E6', alignItems: 'center' }}>
+                            <Text style={{ fontSize: 38, color: 'white', fontFamily:Fonts.BurlingameProSemiBold }}>LOGIN</Text>
+                        </View>
                         </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>
@@ -147,8 +138,8 @@ const styles = StyleSheet.create({
         marginTop: 10,
         paddingLeft: 10,
         width: WIDTH - 55,
-        height: 40,
-        fontSize: 15,
+        height: 60,
+        fontSize: 30,
         backgroundColor: 'rgba(0,0,0,0.02)',
         color: 'black',
         borderColor: 'gray',
