@@ -23,32 +23,32 @@ class DashBoard extends Component {
         return (<View style={{ flexDirection: 'row' }} >
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', borderColor: 'black', width: 200 }}>
                 <Image source={{ uri: item.img }} style={{ marginBottom: 10, marginTop: 10, marginLeft: 10, height: 40, width: 40, borderRadius: 50 }} />
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{ fontSize:18, marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     {item.name}
                 </Text>
             </View>
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', borderColor: 'black', width: 250 }}>
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{ fontSize:18, marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     Schedule
                     </Text>
             </View>
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', borderColor: 'black', width: 150 }}>
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{ fontSize:18, marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     DOB
                     </Text>
             </View>
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', borderColor: 'black', width: 150 }}>
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{ fontSize:18, marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     Enrolled
                     </Text>
             </View>
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', justifyContent: 'center', borderColor: 'black', width: 150 }}>
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{ fontSize:18, marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     Alergies
                     </Text>
             </View>
             <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', borderColor: 'black', width: 120 }}>
-                <Text style={{ marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
+                <Text style={{fontSize:18,  marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProRegular }}>
                     actions
                     </Text>
             </View>
@@ -61,7 +61,7 @@ class DashBoard extends Component {
             <View style={{ flex: 1, backgroundColor: '#E0EEF5' }}>
                 <Header headerText="INFANT" />
                 <View style={styles.studentView}>
-                    <View style={{ flexDirection: 'row', backgroundColor: '#8B63E6' }} >
+                    <View style={{ flexDirection: 'row', backgroundColor: '#8B63E6', borderWidth: 1,borderTopLeftRadius:10,borderTopRightRadius:10  }} >
                         <View style={{ flexDirection: 'row', borderWidth: .5, justifyContent: 'center', alignItems: "center", borderColor: 'black', width: 200 }}>
                             <Text style={{ fontSize:20, color: 'white', marginBottom: 10, marginTop: 20, marginLeft: 10, fontFamily: Fonts.BurlingameProBold}}>
                                 STUDENT
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         height:HEIGHT-300,
         borderColor: 'black',
-        borderWidth: 1,borderRadius:2
+        borderWidth: 1,borderRadius:10
         //backgroundColor:'red'
     },
     maincontainer: {

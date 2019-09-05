@@ -5,7 +5,6 @@ import { Fonts } from '../utilts/Fonts';
 import Swiper from 'react-native-swiper';
 import { Spinner } from './common'
 import { verticalScale, scale } from '../components/common/Scaling';
-import { thisTypeAnnotation } from '@babel/types';
 // import { MAIN_WHITE } from '../theme/color';
 // import AutoHeightImage from 'react-native-auto-height-image';
 
@@ -106,8 +105,8 @@ class Welcome extends Component {
         return (
             <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#E0EEF5' }}>
                 <View style={styles.maincontainer}>
-                    <Text style={{ flex: 0.2, marginTop: 90, fontSize: 70, fontFamily: Fonts.BurlingameProBold }}>
-                        Student App
+                    <Text style={{ flex: 0.2, marginTop: 90, fontSize: 70, fontFamily: Fonts.BurlingameProSemiBold }}>
+                       LITTLE BOOK
                     </Text>
                     {this.createBannersSlider()}
                 </View>
