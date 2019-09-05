@@ -14,7 +14,7 @@ const styles =StyleSheet.create({
         backgroundColor:'#1095E3',
         justifyContent:'center',
         alignItems:'center',
-        height:45,
+        height:60,
         paddingTop:10,
         shadowColor:'#000',
         shadowOffset:{width:0,height:2},
@@ -28,7 +28,7 @@ const styles =StyleSheet.create({
     },
     textStyle: {
         fontFamily:Fonts.BurlingameProRegular,
-        fontSize:20,
+        fontSize:30,
         color:'white',
         fontWeight:'bold'
     }  

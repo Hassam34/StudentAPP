@@ -24,7 +24,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon1  name='home' size={50}style={{ color: focused ? "red" : "#363636" ,width:50, }} />
+                    <Icon1  name='home' size={50}style={{ color: focused ? "white" : "#363636" ,width:50, }} />
                 );
             }
         }
@@ -34,7 +34,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                    <Icon3 size={50} name='calendar' style={{ color: focused ? "red" : "#363636" ,width:50}} />
+                    <Icon3 size={50} name='calendar' style={{ color: focused ? "white" : "#363636" ,width:50}} />
                 );
             }
         }
@@ -47,7 +47,7 @@ const TabNav = createBottomTabNavigator({
             tabBarIcon: ({ focused }) => {
                 return (
                     
-                        <Icon1 size={50} name='pluscircleo' style={{ color: focused ? "red" : "#363636" ,width:50, }} />
+                        <Icon1 size={50} name='pluscircleo' style={{ color: focused ? "white" : "#363636" ,width:50, }} />
                 
                 );
             }
@@ -58,7 +58,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon1 size={50} name='form' style={{ color: focused ? "red" : "#363636",width:50,  }} />
+                        <Icon1 size={50} name='form' style={{ color: focused ? "white" : "#363636",width:50,  }} />
                 );
             }
         }
@@ -68,7 +68,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions: {
             tabBarIcon: ({ focused }) => {
                 return (
-                        <Icon2 size={50} name='mail' style={{ color: focused ? "red" : "#363636" ,width:50, }} />
+                        <Icon2 size={50} name='mail' style={{ color: focused ? "white" : "#363636" ,width:50, }} />
                 );
             }
         }
@@ -90,10 +90,9 @@ const TabNav = createBottomTabNavigator({
             // },
 
             style: {
-                backgroundColor: '#6DBAD7  ',
+                backgroundColor: '#007aff',
                 paddingVertical: 10,
                 height: 60,
-                
                 marginBottom: 0,
                 shadowOpacity: 0.05,
                 shadowRadius: 10,
